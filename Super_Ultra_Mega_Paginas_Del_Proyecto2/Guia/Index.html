@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> NDS </title>
+            <meta charset="UTF-8">
+            <link href="Index.css" rel="stylesheet" type="text/css">
+            <link rel="icon" href="./NDS-logo.png">
+        </head>
+        <body>
+            <div class="Cabecera"><p>Super Ultra Mega Roms</p></div>
+            <div class="Todo">
+                <div class="Botones1">
+                <div class="How">
+                    <form action="Index.html" class="Botones1">
+                       <input type="submit" value="Guia">
+                    </form>
+                    </div>
+                    <div class="Roms">
+                        <form action="..//Index.html" class="Botones1">
+                            <input type="submit" value="Roms">
+                        </form>
+                    </div>
+                </div>
+                <div class="subcabecera">
+                    <br>
+                </div>
+                <br>
+                <div class="Centro">
+                    <div class="indice">
+                        <h1 id="titulo">COMO HACER TU PROPIA CONSOLA</h1>
+                        <h1 id="titulo" class="hardware1" onclick="hardware1()">HARDWARE</h1>
+                        <div id="hard">
+                            <p>Para hacer la consola portatil retro mostraré lo que nosotros hemos utilizado, no tienes porque adqurir este producto exactamente, de hecho en alguno te recomendaremos otro.<br><br>Bien si quieres hacerla portatil necesitaras todos los productos que te mostraremos o similares, y como ultima aportación esto es para hacer una consola basica sin personalización ni tampoco tiene las caracteristicas que tiene la nuestra ya que el objetivo es que sea para gente con nociones basicas o minimas de informatica. </p>
+                            <div class="Comp">
+                                <p>Raspberry Pi</p>
+                                <a href="https://www.amazon.es/Raspberry-Pi-Model-Placa-Quad-Core/dp/B00T2U7R7I?th=1">
+                                    <img src="./Raspberry Pi.png" alt="Raspi"></a>
+                            </div>
+                            <div class="Comp">
+                                <p>Pantalla LCD 5"</p>
+                                <a href="https://www.amazon.es/DollaTek-Pantalla-táctil-800X480-Raspberry/dp/B07DK6CKJJ/ref=sr_1_13?__mk_es_ES=ÅMÅŽÕÑ&crid=C5OD43ZR6K9L&keywords=pantalla+lcd+raspberry+pi+hdmi&qid=1650663532&sprefix=pantalla+lcd+raspberry+pi+hdmi%2Caps%2C94&sr=8-13">
+                                    <img src="./Pantalla.jpg" alt="Raspi">
+                                </a>
+                            </div>
+                            <div class="Comp">
+                                <p>Hdmi</p>  
+                                <a href="https://es.aliexpress.com/item/4000436976428.html?spm=a2g0o.ppclist.product.2.27f1sA5HsA5HMc&pdp_npi=2%40dis%21EUR%21€%201%2C97%21€%201%2C82%21%21%21%21%21%400b0a23b016535673164207610ebe6f%21%21btf&_t=pvid%3Af37b464f-751f-41b4-bb52-25718172414a&afTraceInfo=4000436976428__pc__pcBridgePPC__xxxxxx__1653567316&gatewayAdapt=glo2esp">
+                                    <img src="./Hdmi.jpg" alt="Raspi">
+                                </a>
+                            </div>
+                            <div class="Comp">   
+                                <p>Bateria externa</p>
+                                <a href="https://www.amazon.es/POSUGEAR-20000mah-Bateria-Portable-Compatible/dp/B09LM3RS2N/ref=sr_1_27?__mk_es_ES=ÅMÅŽÕÑ&crid=267YP3FWGTXBY&keywords=mini%2Bpower%2Bbank%2B15000mah&qid=1651161965&sprefix=mini%2Bpower%2Bbank%2B15000mah%2Caps%2C101&sr=8-27&th=1">
+                                    <img src="./Bateria.png" alt="Raspi">
+                                </a>
+                            </div>
+                            <div class="Comp">
+                                <p>Carcasa</p>
+                                <a href="https://drive.google.com/file/d/1mKchdTQL-27DcbSm1L7z6HUDuNaiIdtz/view?usp=sharing">
+                                    <img src="./Carcasa.png" alt="Raspi">
+                                </a>
+                            </div>
+                            <div class="Comp">
+                                <p>Tarjeta SD</p>
+                                <a href="https://www.amazon.es/Kingston-Tarjeta-SDCS2-32GB-Adaptador/dp/B07YGZ7FY7/ref=sr_1_6?keywords=tarjeta%2Bsd%2B32gb&qid=1653567082&sprefix=Tarjeta%2Bsd%2B32%2Caps%2C84&sr=8-6&th=1">
+                                    <img src="./SD.png" alt="Raspi">
+                                </a>
+                            </div>
+                            <div class="ConComp">
+                                <div class="video">
+                                    <video controls src="./Acoplamiento_Piezas.mp4" id="video"></video>
+                                </div>
+                                <div class="videoP">
+                                    <p>Para conectar la Raspberry con la pantalla es muy sencillo, se basa en hacerlo como en el video si elegiste los mismos componentes que nosotros, dependiendo del modelo de la pantalla necesitaras instalar drivers para poder tener señal de video.</p>
+                                    <p>El modelo de la Raspberry Pi usada en el video es la 2B y la pantalla es una LCD de 5 pulgadas, el hdmi nos vino con la pantalla.</p>
+                                </div>
+                                    <p id="Pan">Nuestra pantalla no la recomendamos mucho ya que no tiene excesivo brillo, y por eso hemos puesto un link de compra para el HDMI, y para la carcasa hemos puesto un link al modelo 3d por si quereis utilizar el nuestro. <br>Luego ya para las especificaciones de la Raspberry dependera de ti pero con la que hemos usado ya funcionan bien los juegos.</p>
+                            </div>
+                        </div>
+                        <h1 id="titulo" onclick="software1()">Software</h1> 
+                        <div id="soft">
+                            <p>Para el tema de software es obviamente donde entra la tarjeta SD, cojeremos la SD y la pincharemos al ordenador como podamos y para ello hay que instalar <a href="https://www.balena.io/etcher/">BalenaEtcher</a> para instalar el sistema operativo de Retropie donde este <a href="https://retropie.org.uk/">link</a> te lleva  ala pagina oficial de Retropie para descargar el SO en la version que prefieras.</p>
+                            <p>Ahora los pasos para unicamente instalar el SO lo pondremos en estas capturas en orden:</p>
+                            <div class="img">
+                                <img src="./Sarchivo.PNG" alt=" Paso1" >
+                                <p class="txt">Una vez instalado Balena y pinchado la tarjeta SD, seleccionaremos el archivo que buscamos, en este caso la imagen de Retropie.</p>
+                                <p class="txt">Nota (Tambien se pude hacer con la url del archivo) <br> pero en este caso lo hicimos con la primera opción.</p>
+                            </div>
+                            <div class="img">
+                                <img src="./Ssd.PNG" alt="Paso2">
+                                <p class="txt">Ahora es sencillo solo tenemos que seleccionar la tarjeta SD que hayamos pinchado aunque lo normal es que si la pusiste antes de abrir el programa te la haya detectado y seleccionado automaticámente.</p>
+                                <p class="txt">Nota (La SD que elegimos para el proyecto es de 32 GB, pero con mucho menos ya basta, como son juegos retro y el sistema es muy ligero no hace falta una gran memoria de almacenamiento.)</p>
+                            </div>
+                            <div class="img">
+                                <img src="./Flash.PNG" alt="Paso3">
+                                <p class="txt">Ahora solo hay que darle a Flash y listo.</p>
+                                <p class="txt">Nota (La SD que elegimos para el proyecto es de 32 GB, pero con mucho menos ya basta, como son juegos retro y el sistema es muy ligero no hace falta una gran memoria de almacenamiento.)</p>
+                            </div>
+                            <div class="fin">
+                                <p>Cabe recalcar que esta guia es demasiado básica y solo explica la instalación mínima sin estar detallada, solamente para una vez instalada ponerse a jugar, no incluye las modificaciones o diveros paquetes instalados en la nuestra.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                        
+                    </div>
+                </div>
+            <script>
+               function hardware1() {
+                var h = document.getElementById("hard");
+
+                    if(h.style.display == "none") {
+                        h.style.display = "block"
+                    }
+                    else {
+                        h.style.display = "none"
+                    }
+                }
+                function software1() {
+                var s = document.getElementById("soft");
+
+                    if(s.style.display == "none") {
+                        s.style.display = "block"
+                    }
+                    else {
+                        s.style.display = "none"
+                    }
+                }
+
+            </script>
+        </body>
+    </html>
