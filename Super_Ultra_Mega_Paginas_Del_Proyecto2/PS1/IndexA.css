@@ -221,7 +221,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
    }
-.Ne {
+#Ne {
     color: rgb(255, 255, 255);
     font-size: 6.5vw;
 }
